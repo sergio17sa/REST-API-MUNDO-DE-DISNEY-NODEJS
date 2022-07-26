@@ -1,6 +1,16 @@
 {
+"name": "api",
+"version": "1.0.0",
+"description": "",
+"main": "index.js",
+
+"scripts": {
+  "start": "nodemon -L"
+},
+
   "dependencies": {
     "@sendgrid/mail": "^7.7.0",
+    "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "sequelize": "^6.21.3",
     "uuid": "^8.3.2"

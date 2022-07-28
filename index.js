@@ -1,6 +1,11 @@
-const { Personajes, Peliculas, Genero } = require('./api/db.js');
-const { conn} = require('./api/db.js')
+const {conn} = require('./api/db.js');
+const server = require('./api/app.js');
 
+conn.sync({force:true}).then(()=> {
+    server.listen(3001, () => {
+        console.log('listening in port 3001');
+    });
+});
 
 
 

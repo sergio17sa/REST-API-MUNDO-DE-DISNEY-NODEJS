@@ -2,7 +2,7 @@ const { Sequelize, DataTypes} = require('sequelize');
 
 module.exports = (sequelize) =>{
 
-    sequelize.define('Genero',{
+    sequelize.define('Genre',{
         
         id:{
             type: Sequelize.UUID,
@@ -10,7 +10,12 @@ module.exports = (sequelize) =>{
             primaryKey: true
         },
 
-        Nombre:{
+        Name:{
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+
+        Picture:{
             type: DataTypes.STRING,
             allowNull: false
         }

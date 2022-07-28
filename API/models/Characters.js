@@ -2,7 +2,7 @@
 const { Sequelize, DataTypes } = require('sequelize');
 
 module.exports = (sequelize) => {
-    sequelize.define('Personajes', {
+    sequelize.define('Characters', {
 
         id: {
             type: Sequelize.UUID,
@@ -10,31 +10,40 @@ module.exports = (sequelize) => {
             primaryKey: true
         },
 
-        Imagen: {
+        // id: {
+        //     type: DataTypes.INTEGER,
+        //     autoIncrement: true,
+        //     primaryKey: true,
+        //     allowNull: false,
+        //   },
+
+        Picture: {
             type: DataTypes.STRING,
             allowNull: false
         },
 
-        Nombre: {
+        Name: {
             type: DataTypes.STRING,
             allowNull: false
         },
 
-        Edad: {
+        Age: {
             type: DataTypes.INTEGER,
             allowNull: false
         },
 
-        Peso: {
+        Weight: {
             type: DataTypes.INTEGER,
             allowNull: false
         },
 
 
-        Historia: {
+        History: {
             type: DataTypes.TEXT,
             allowNull: false
-        }
+        },
+
+        
 
     });
 };

@@ -1,8 +1,8 @@
 const { Sequelize, DataTypes } = require('sequelize');
 
-
 module.exports = (sequelize) => {
-    sequelize.define('Peliculas', {
+
+    sequelize.define('Users', {
 
         id: {
             type: Sequelize.UUID,
@@ -10,25 +10,18 @@ module.exports = (sequelize) => {
             primaryKey: true
         },
 
-        Imagen: {
+        Name: {
             type: DataTypes.STRING,
             allowNull: false
         },
 
-        Título: {
+        Email: {
             type: DataTypes.STRING,
             allowNull: false
         },
-
-        Fecha_de_creación: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
-
-        Calificación: {
+        Password: {
             type: DataTypes.INTEGER,
-            allowNull: true
+            allowNull: false
         }
-
     })
 };

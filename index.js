@@ -1,7 +1,7 @@
 const {conn} = require('./api/db.js');
 const server = require('./api/app.js');
 
-conn.sync({force:true}).then(()=> {
+conn.sync({force:false}).then(()=> {
     server.listen(3001, () => {
         console.log('listening in port 3001');
     });

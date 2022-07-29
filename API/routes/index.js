@@ -1,5 +1,5 @@
 const { Router } = require('express');
-const {create_character, get_character} = require('./controlers')
+const {create_character, get_character,updateCharacter, deleteCharacter} = require('./controlers')
 
 
 const router = Router();
@@ -7,8 +7,8 @@ const router = Router();
 
 router.get('/characters', get_character); // debe mostrar listado de personas nombre - imagen 
 router.post('/characters', create_character);
-router.put('/characters');
-router.delete('/characters');
+router.put('/characters/:id', updateCharacter);
+router.delete('/characters/:id', deleteCharacter);
 
 // DETALLE DE PERSONAJE POR PARAMS
 router.get('/characters:id');// obtener el detalle de un personaje por id

@@ -1,0 +1,38 @@
+{
+    "Name": "martin",
+    "Age": 24,
+    "movies": [
+        {
+            "Title": "hola",
+            "CreateDate": "12/10/1995",
+            "Rating": 4,
+            "Picture": "https://static.wikia.nocookie.net/doblaje/images/2/2f/Aladdin_Animated_Series_DVD.jpg/revision/latest/top-crop/width/360/height/450?cb=20201004165029&path-prefix=es",
+            "genres": [
+                {
+                    "Name": "Comedy",
+                    "Picture": "https://static.wikia.nocookie.net/dreamlogos/images/f/f8/Disney_Comedy.png/revision/latest/scale-to-width-down/250?cb=20181227232908"
+                },
+                {
+                    "Name": "Fantasy",
+                    "Picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Disney_Fantasy_logo.svg/397px-Disney_Fantasy_logo.svg.png?20160806202118"
+                }
+            ]
+        },
+        {
+            "Title": "donald y minye",
+            "CreateDate": "12/10/1995",
+            "Rating": 4,
+            "Picture": "https://static.wikia.nocookie.net/doblaje/images/2/2f/Aladdin_Animated_Series_DVD.jpg/revision/latest/top-crop/width/360/height/450?cb=20201004165029&path-prefix=es",
+            "genres": [
+                {
+                    "Name": "Comedy",
+                    "Picture": "https://static.wikia.nocookie.net/dreamlogos/images/f/f8/Disney_Comedy.png/revision/latest/scale-to-width-down/250?cb=20181227232908"
+                },
+                {
+                    "Name": "Fantasy",
+                    "Picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Disney_Fantasy_logo.svg/397px-Disney_Fantasy_logo.svg.png?20160806202118"
+                }
+            ]
+        }
+    ]
+}

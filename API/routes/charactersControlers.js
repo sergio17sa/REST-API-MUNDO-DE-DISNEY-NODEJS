@@ -21,13 +21,6 @@ const get_character = async (req, res) => {
                 attributes: ['Name', 'Picture']
             });
 
-            // const charactersName_Picture = allCharacters.map(c => {
-            //     return {
-            //         Name: c.Name,
-            //         Picture: c.Picture
-            //     }
-            // });
-
             res.status(201).json(allCharacters)
 
         } else {

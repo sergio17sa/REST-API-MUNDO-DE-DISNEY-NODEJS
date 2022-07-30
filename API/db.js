@@ -31,8 +31,8 @@ const modelsdb = [];
 // en esta parte leemos los archivos de la carpeta models, los requerimos y los ingresamos al array modelsdb
 
 
-f/* Reading the files in the models folder and then pushing them into the modelsdb array. */
-s.readdirSync(path.join(__dirname, '/models'))  // leo los archivos que estan en el directorio api en la carpeta modelos
+/* Reading the files in the models folder and then pushing them into the modelsdb array. */
+fs.readdirSync(path.join(__dirname, '/models'))  // leo los archivos que estan en el directorio api en la carpeta modelos
     .filter(file => (file.indexOf('.') !== 0) && (file !== basename) && (file.slice(-3) === '.js')) // filtro solo los archivos correspondientes a los modelos
     .forEach(file => {
         modelsdb.push(require(path.join(__dirname, '/models', file))) // ingreso los modelos a al array modelsdb

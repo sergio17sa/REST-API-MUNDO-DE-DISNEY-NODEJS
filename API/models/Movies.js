@@ -1,7 +1,7 @@
 const { Sequelize, DataTypes } = require('sequelize');
 
 
-/* A function that is being exported. */
+
 module.exports = (sequelize) => {
     sequelize.define('Movies', {
 

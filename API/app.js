@@ -1,5 +1,5 @@
 const express = require('express');
-const morgan = require('morgan'); // me permite ver información de la solicitud http en la consola
+const morgan = require('morgan'); 
 const bodyParser = require('body-parser');
 const routes = require('./routes/index.js');
 

@@ -1,7 +1,7 @@
 
 const { Sequelize, DataTypes } = require('sequelize');
 
-/* *|CURSOR_MARCADOR|* */
+
 module.exports = (sequelize) => {
     sequelize.define('Characters', {
 

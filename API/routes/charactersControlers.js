@@ -12,7 +12,7 @@ const get_character = async (req, res) => {
         if (!name && !age && !weight && !movies) {
 
             const allCharacters = await Characters.findAll({
-                attributes:['Name' , 'Picture']
+                attributes: ['Name', 'Picture']
             });
 
             // const charactersName_Picture = allCharacters.map(c => {
@@ -105,7 +105,7 @@ const get_character = async (req, res) => {
                     });
 
                     movieCharacters.length > 0 ? res.status(201).send(movieCharacters)
-                    : res.status(200).send({ msg: `There are not movies with id ${movies}` })
+                        : res.status(200).send({ msg: `There are not movies with id ${movies}` })
 
                 } else {
                     res.status(200).send({ msg: ` id ${movies} is not uuid` })

@@ -4,20 +4,84 @@ const { v4: uuidv4 } = require('uuid');
 
 const get_movies = async (req, res) => {
 
+    const { name, genre, order } = req.query
+
+
+
     try {
 
-        const allMovies = await Movies.findAll({
-            attributes: ['Title', 'Picture', 'CreateDate']
+        if (!name && !genre && !order) {
 
-        });
+            const allMovies = await Movies.findAll({
+                attributes: ['Title', 'Picture', 'CreateDate']
 
-        res.status(201).send(allMovies)
+            });
+
+            res.status(201).send(allMovies)
+        } else {
+
+            if (name) {
+
+                const movieByName = await Movies.findAll({
+                    where: {
+                        Title: name.toLowerCase()
+                    },
+                    include: {
+                        model: Characters,
+                        attributes: ['Name'],
+                        through: {
+                            attributes: [],
+                        },
+                    }
+                })
+
+                res.status(201).send(movieByName)
+            }
+
+            if (genre) {
+
+                if (genre.match(/^[0-9A-F]{8}-[0-9A-F]{4}-[4][0-9A-F]{3}-[89AB][0-9A-F]{3}-[0-9A-F]{12}$/i)) {
+
+                    const movieById = await Movies.findAll({
+                        where: {
+                            id: genre
+                        },
+                        include: {
+                            model: Characters,
+                            attributes: ['Name'],
+                            through: {
+                                attributes: [],
+                            },
+                        }
+                    })
+
+                    movieById.length > 0 ? res.status(201).send(movieById) :
+                        res.status(200).send(`there are not movies with genre ${genre}`)
+                } else {
+                    res.status(200).send({ msg: `id ${genre} is not uuid` })
+                }
+            }
+
+            if (order) {
+
+                const SortMovieByDate = await Movies.findAll({})
+
+                if (order === "DESC") {
+                    const ascending = SortMovieByDate.sort((a, b) => (a.CreateDate > b.CreateDate) ? -1
+                        : (b.CreateDate > a.CreateDate) ? 1 : 0)
+                    res.status(201).send(ascending)
+
+                } else {
+                    const Descending = SortMovieByDate.sort((a, b) => (a.CreateDate > b.CreateDate) ? 1
+                        : (b.CreateDate > a.CreateDate) ? -1 : 0)
+                        res.status(201).send(Descending)
+                }
+            }
+        }
 
     } catch (error) {
         res.status(404).send({ msg: 'not was possible to find movies ' })
-
     }
-
 };
 
 
@@ -43,7 +107,7 @@ const getMovieById = async (req, res) => {
                     attributes: [],
                 },
             },
-          
+
         })
 
         res.status(201).send(movieDetail)

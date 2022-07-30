@@ -34,8 +34,15 @@ GET MOVIE DETAIL request GET 'http://localhost:3001/movies/fffb33f8-9c4c-468c-92
 USER REGISTER request POST 'http://localhost:3001/auth/register' \
 USER LOGIN request POST 'http://localhost:3001/auth/login' \
 ```
+## URL POSTMAN DOCUMENTATION
+```python
+En la siguiente URL se pueden ver con detalle los endpoints y los ejemplos de como se envía la información vía JSON
+
+# REST API DISNEY
+'https://documenter.getpostman.com/view/20684779/UzdzRjWk'
 
 ## LA API ESTA CONFIGURADA PARA QUE CORRA EN LOCALHOST/3001
+```
 
 ```python
 DATOS DE CONTACTO
@@ -43,3 +50,5 @@ DATOS DE CONTACTO
 # SERGIO SALGADO
 LinkedIn: 'linkedin.com/in/sergiosalgado17'
 Email: 'sergiosalgado624@gmail.com'
+```
+

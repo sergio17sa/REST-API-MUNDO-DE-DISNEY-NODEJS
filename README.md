@@ -19,7 +19,6 @@ Desarrollo del challenge de backend de ALKEMY utilizando NodeJS, Express, Postgr
 
 ## ENDPOINTS
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
 
 ```bash
 GET ALL CHARACTERS request GET 'http://localhost:3001/characters' \

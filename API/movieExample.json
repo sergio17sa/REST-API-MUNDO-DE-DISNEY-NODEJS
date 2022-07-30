@@ -1,0 +1,16 @@
+{
+    "Picture": "https://static.wikia.nocookie.net/doblaje/images/2/2f/Aladdin_Animated_Series_DVD.jpg/revision/latest/top-crop/width/360/height/450?cb=20201004165029&path-prefix=es",
+    "Title": "Blanca nieves y los 7 enanitos",
+    "CreateDate": "12/10/1996",
+    "Rating": 5,
+    "genres": [
+        {
+            "Name": "Drama",
+            "Picture": "https://static.wikia.nocookie.net/doblaje/images/2/2f/Aladdin_Animated_Series_DVD.jpg/revision/latest/top-crop/width/360/height/450?cb=20201004165029&path-prefix=es"
+        },
+        {
+            "Name": "Suspenso",
+            "Picture": "https://static.wikia.nocookie.net/doblaje/images/2/2f/Aladdin_Animated_Series_DVD.jpg/revision/latest/top-crop/width/360/height/450?cb=20201004165029&path-prefix=es"
+        }
+    ]
+}

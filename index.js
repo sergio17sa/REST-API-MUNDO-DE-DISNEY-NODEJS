@@ -1,5 +1,6 @@
 const {conn} = require('./api/db.js');
 const server = require('./api/app.js');
+/* Creating a connection to the database and then starting the server. */
 
 conn.sync({force:false}).then(()=> {
     server.listen(3001, () => {

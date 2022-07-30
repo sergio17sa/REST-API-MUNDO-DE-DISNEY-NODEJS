@@ -3,6 +3,12 @@ const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 
 
+/**
+ * If the user exists, and the password is correct, then send the user's email and a token.
+ * @param req - the request object
+ * @param res - {
+ * @returns The user's email and token.
+ */
 const loginUser = async (req, res) => {
 
     const { Email, Password } = req.body;

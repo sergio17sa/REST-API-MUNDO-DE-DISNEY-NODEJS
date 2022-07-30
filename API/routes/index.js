@@ -6,6 +6,7 @@ const { loginUser } = require('./userloggin');
 const {userRegister} = require('./userRegister');
 
 
+/* A router. */
 const router = Router();
 
 // CHARACTERS

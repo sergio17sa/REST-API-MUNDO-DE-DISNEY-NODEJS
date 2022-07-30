@@ -8,6 +8,7 @@ const get_movies = async (req, res) => {
 
 
 
+   /* This is a function that is used to get all the movies from the database. */
     try {
 
         if (!name && !genre && !order) {
@@ -118,6 +119,12 @@ const getMovieById = async (req, res) => {
 };
 
 
+/**
+ * It creates a movie and then creates a genre if it doesn't exist and then adds the genre to the
+ * movie.
+ * @param req - the request object
+ * @param res - {
+ */
 const createMovie = async (req, res) => {
 
     const { Title, Rating, Picture, CreateDate, genres } = req.body
@@ -153,6 +160,11 @@ const createMovie = async (req, res) => {
     }
 };
 
+/**
+ * It takes a movie object and updates it in the database.
+ * @param req - The request object.
+ * @param res - The response object.
+ */
 const updateMovie = async (req, res) => {
 
 
@@ -204,6 +216,12 @@ const updateMovie = async (req, res) => {
 };
 
 
+/**
+ * It deletes a movie from the database.
+ * @param req - The request object. This contains information about the HTTP request that raised the
+ * event.
+ * @param res - The response object.
+ */
 const deleteMovie = async (req, res) => {
 
     const { id } = req.params;

@@ -1,3 +1,4 @@
+/* Creating a table called Users with the following columns: id, Name, Email, Password. */
 const { Sequelize, DataTypes } = require('sequelize');
 
 module.exports = (sequelize) => {

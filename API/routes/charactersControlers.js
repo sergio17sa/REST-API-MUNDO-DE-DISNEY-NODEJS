@@ -3,6 +3,12 @@ const { v4: uuidv4 } = require('uuid');
 
 
 
+/**
+ * If the query parameters are empty, then return all characters with their names and pictures. 
+ * If the query parameters are not empty, then return the characters that match the query parameters.
+ * @param req - The request object.
+ * @param res - the response object
+ */
 const get_character = async (req, res) => {
 
     const { name, age, weight, movies } = req.query;
@@ -120,6 +126,13 @@ const get_character = async (req, res) => {
 
 
 
+/**
+ * It creates a character and then creates a movie and then creates a genre and then adds the genre to
+ * the movie and then adds the movie to the character.
+ * </code>
+ * @param req - {
+ * @param res - {
+ */
 const create_character = async (req, res) => {
 
     const { Name, Picture, Age, Weight, History, movies } = req.body;
@@ -175,6 +188,13 @@ const create_character = async (req, res) => {
 };
 
 
+/**
+ * It takes a character object, and updates the character in the database. If the character has movies,
+ * it will add the movies to the database if they don't exist, and then add the movies to the
+ * character.
+ * @param req - the request object
+ * @param res - the response object
+ */
 const updateCharacter = async (req, res) => {
 
     const { Name, Picture, History, Age, Weight, movies } = req.body;
@@ -242,6 +262,13 @@ const updateCharacter = async (req, res) => {
 };
 
 
+/**
+ * It takes the id of the character to be deleted from the request parameters, finds the character in
+ * the database, and if it exists, deletes it.
+ * @param req - The request object. This contains information about the HTTP request that raised the
+ * event.
+ * @param res - The response object.
+ */
 const deleteCharacter = async (req, res) => {
 
     const { id } = req.params;

@@ -8,6 +8,7 @@ server.name = 'API';
 
 
 //MIDDLEWARES EXPRESS
+/*  */
 
 server.use(bodyParser.json({ limit: '50mb' }));  // me permite acceder al payload o contenido de la solicitud parseandola a un formato json
 server.use(bodyParser.urlencoded({ extended: true, limit: '50mb' })); // me permite introducir texto de consulta en una url sin que el navegador lo confunda con la ruta

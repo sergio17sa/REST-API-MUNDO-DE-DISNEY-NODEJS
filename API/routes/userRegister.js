@@ -4,6 +4,13 @@ const bcrypt = require("bcrypt");
 const nodemailer = require("nodemailer");
 
 
+/**
+ * It creates a new user in the database, and sends an email to the user's email address.
+ * @param req - The request object. This is the object that represents the HTTP request and has
+ * properties for the request query string, parameters, body, HTTP headers, and so on.
+ * @param res - The response object.
+ * @returns The user is being created and the email is being sent.
+ */
 const userRegister = async (req, res) => {
 
     const { Name, Password, Email } = req.body;

@@ -7,6 +7,7 @@ const {
 } = process.env
 
 
+/* Creating a new instance of Sequelize. */
 const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}`, {
     logging: true,
 
@@ -30,7 +31,8 @@ const modelsdb = [];
 // en esta parte leemos los archivos de la carpeta models, los requerimos y los ingresamos al array modelsdb
 
 
-fs.readdirSync(path.join(__dirname, '/models'))  // leo los archivos que estan en el directorio api en la carpeta modelos
+f/* Reading the files in the models folder and then pushing them into the modelsdb array. */
+s.readdirSync(path.join(__dirname, '/models'))  // leo los archivos que estan en el directorio api en la carpeta modelos
     .filter(file => (file.indexOf('.') !== 0) && (file !== basename) && (file.slice(-3) === '.js')) // filtro solo los archivos correspondientes a los modelos
     .forEach(file => {
         modelsdb.push(require(path.join(__dirname, '/models', file))) // ingreso los modelos a al array modelsdb
@@ -49,6 +51,7 @@ console.log(sequelize.models)
 
 //relaciones 
 
+/* Creating the relationships between the tables. */
 Characters.belongsToMany(Movies, { through: 'Movies_Characters' });
 Movies.belongsToMany(Characters, { through: 'Movies_Characters' });
 Movies.belongsToMany(Genre, { through: 'Genre_Movies' });

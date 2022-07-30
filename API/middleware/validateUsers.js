@@ -1,4 +1,5 @@
 
+/* The above code is a middleware function that is used to validate the user. */
 const jwt = require('jsonwebtoken');
 
 

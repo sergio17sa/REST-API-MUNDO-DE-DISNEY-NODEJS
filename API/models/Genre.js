@@ -1,3 +1,4 @@
+/* Creating a table called Genre with the following columns: id, Name, and Picture. */
 const { Sequelize, DataTypes} = require('sequelize');
 
 module.exports = (sequelize) =>{

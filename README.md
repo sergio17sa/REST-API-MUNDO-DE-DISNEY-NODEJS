@@ -4,7 +4,7 @@ Desarrollo del challenge de backend de ALKEMY utilizando NodeJS, Express, Postgr
 
 ## FUNCIONALIDADES
 
--Registro de usuarios a través un endpoint Register que hashea la password antes de guardarla en la base de datos con el module bcrypt.
+- Registro de usuarios a través un endpoint Register que hashea la password antes de guardarla en la base de datos con el module bcrypt.
 
 - Autenticación de usuarios mediante  JWT a través de un endpoint de LOGIN y un middleware "validate token" para el resto de las rutas.
 
